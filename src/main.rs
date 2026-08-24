@@ -157,6 +157,11 @@ async fn main() {
             window_options.window_decorations = Some(WindowDecorations::Client);
 
             cx.open_window(window_options, |window, app| {
+                window.on_window_should_close(app, |window, _| {
+                    window.remove_window();
+                    false
+                });
+
                 gpui_component::init(app);
 
                 app.new(|cx| {

@@ -3,7 +3,7 @@ use anyhow::anyhow;
 use gpui::http_client::Url;
 use gpui::{
     App, AppContext, Bounds, Context, EntityId, ExternalPaths, IntoElement, Point, SharedString,
-    TitlebarOptions, Window, WindowBounds, WindowId, WindowOptions, px, size,
+    TitlebarOptions, Window, WindowBounds, WindowDecorations, WindowId, WindowOptions, px, size,
 };
 use gpui_component::Root;
 use reqwest::header::HeaderMap;
@@ -138,6 +138,11 @@ impl PlayCore {
         let options = window_center_settings(window, 1400., 800., title);
         let handler = cx
             .open_window(options, move |window, app| {
+                window.on_window_should_close(app, |window, _| {
+                    window.remove_window();
+                    false
+                });
+
                 let view = app.new(|cx| PlayCore::new(window, cx));
                 if let Ok(mut player_entity_id) = player_entity_id_for_window.lock() {
                     *player_entity_id = Some(view.entity_id());
@@ -169,9 +174,10 @@ fn window_center_settings(window: &mut Window, w: f32, h: f32, title: &str) -> W
         is_resizable: true,
         titlebar: Some(TitlebarOptions {
             title: Some(SharedString::from(title.to_string())),
-            appears_transparent: false,
+            appears_transparent: true,
             ..Default::default()
         }),
+        window_decorations: Some(WindowDecorations::Client),
         ..Default::default()
     }
 }

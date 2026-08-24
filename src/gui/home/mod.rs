@@ -1,10 +1,9 @@
 mod sidebar_menu;
-mod title_bar;
 mod video_player;
 
 use crate::component::color::rgb_to_u32;
+use crate::component::window_title_bar::CustomTitleBar;
 use crate::gui::home::sidebar_menu::CustomSidebarMenu;
-use crate::gui::home::title_bar::CustomTitleBar;
 use crate::gui::home::video_player::VideoPlayer;
 use crate::gui::music_page::MusicPage;
 use crate::gui::video_page::VideoPage;

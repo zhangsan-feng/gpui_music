@@ -1,4 +1,7 @@
 use gpui::*;
+use gpui_component::Root;
+use player_core::{PlayCoreGlobalState, PlayCoreState};
+use crate::gui;
 
 pub fn window_center(window: &mut Window, window_size: Size<Pixels>) -> WindowBounds {
     let w = window_size.width.as_f32();
@@ -71,3 +74,16 @@ pub fn window_center_settings(window: &mut Window, w: f32, h: f32) -> WindowOpti
     });
     window_options
 }
+
+
+// pub fn open(window_options: WindowOptions, cx: &mut App,){
+//     cx.open_window(window_options, |window, app| {
+//         window.on_window_should_close(app, |window, _| { window.remove_window();false });
+//         gpui_component::init(app);
+//         app.new(|cx| {
+//             let main_window = cx.new(|cx| gui::home::HomeView::new(window, cx));
+//             Root::new(main_window, window, cx)
+//         })
+//     })
+//         .expect("Failed to create app");
+// }

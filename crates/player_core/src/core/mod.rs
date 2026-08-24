@@ -128,6 +128,7 @@ impl Render for PlayCore {
                 this._handle_file_drop(paths, cx);
             }))
             .bg(rgb_to_u32(255, 255, 255))
+            .child(self.render_title_bar(window, cx))
             .child(
                 v_flex()
                     .flex_grow_1()
