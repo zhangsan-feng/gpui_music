@@ -1,7 +1,7 @@
 use super::{DetailOrigin, Page, VideoPage};
 use crate::drive::NetworkStatic;
 use crate::plugins::extractor::video;
-use gpui::{AsyncApp, Context, EntityId, Window, WindowId, point, px};
+use gpui_kit::{AsyncApp, Context, EntityId, Window, WindowId, point, px};
 use log::info;
 use player_core::{PlayCore, PlayCoreGlobalState, PlayCoreStateEvent, PlayStatic};
 

@@ -21,10 +21,8 @@ name = "gpui-medio"
 path = "src/main.rs"
 
 [dependencies]
-gpui.workspace = true
-gpui_platform.workspace = true
+gpui-kit.workspace = true
 reqwest_client.workspace = true
-gpui-component.workspace = true
 log.workspace = true
 chrono.workspace = true
 fern.workspace = true
@@ -47,16 +45,11 @@ build_windows = { path = "crates/build_windows", default-features = false, featu
 player_core = { path = "crates/player_core" }
 image.workspace = true
 scraper.workspace = true
-gpui-component-assets.workspace = true
 
 
 [workspace.dependencies]
-# https://github.com/longbridge/gpui-component/blob/main/Cargo.toml
-gpui = { git = "https://github.com/zed-industries/zed" }
-gpui_platform = { git = "https://github.com/zed-industries/zed" }
-reqwest_client = { git = "https://github.com/zed-industries/zed" }
-gpui-component = { git = "https://github.com/longbridge/gpui-component" }
-gpui-component-assets = { git = "https://github.com/longbridge/gpui-component"}
+gpui-kit = "0.6"
+reqwest_client = { package = "gpui-pre-reqwest-client", version = "0.3.1" }
 
 log = {version = "0.4.29"}
 chrono = {version = "0.4.43", features = ["default"]}

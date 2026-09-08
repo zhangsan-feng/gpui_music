@@ -1,6 +1,6 @@
 use crate::{PlatState, PlayCore, rgb_to_u32};
-use gpui::*;
-use gpui_component::{ElementExt, IconName, text::markdown, v_flex};
+use gpui_kit::component::{ElementExt, IconName, text::markdown, v_flex};
+use gpui_kit::*;
 
 impl PlayCore {
     pub fn render_frame(&self, cx: &mut Context<Self>) -> impl IntoElement {

@@ -1,7 +1,7 @@
 use super::MusicPlayer;
 use crate::component::color::rgb_to_u32;
-use gpui::*;
-use gpui_component::{IconName, h_flex, v_flex};
+use gpui_kit::component::{IconName, h_flex, v_flex};
+use gpui_kit::*;
 
 impl MusicPlayer {
     fn _render_control_button(

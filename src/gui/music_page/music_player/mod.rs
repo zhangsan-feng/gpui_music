@@ -2,7 +2,7 @@ mod core;
 mod ui;
 
 use crate::drive::NetworkStatic;
-use gpui::{AppContext, Context, Entity, Window};
+use gpui_kit::{AppContext, Context, Entity, Window};
 use player_core::PlayCore;
 
 pub struct MusicPlayer {

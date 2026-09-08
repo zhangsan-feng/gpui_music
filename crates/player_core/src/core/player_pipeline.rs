@@ -1,6 +1,6 @@
 use crate::{PlayCore, PlayCoreMediaType};
 use anyhow::Context as AnyhowContext;
-use gpui::Context;
+use gpui_kit::Context;
 use gstreamer as gst;
 use gstreamer::prelude::*;
 use gstreamer_app as gst_app;

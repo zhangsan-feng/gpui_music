@@ -1,5 +1,5 @@
 use futures_util::StreamExt;
-use gpui::http_client::http::HeaderMap;
+use gpui_kit::http_client::http::HeaderMap;
 use log::error;
 use reqwest::{ClientBuilder, Response, multipart};
 use std::path::Path;

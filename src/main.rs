@@ -9,8 +9,8 @@ mod drive;
 mod gui;
 mod plugins;
 
-use gpui::*;
-use gpui_component::*;
+use gpui_kit::component::*;
+use gpui_kit::*;
 use log::{Level, info};
 use player_core::{PlayCoreGlobalState, PlayCoreState};
 use reqwest_client::ReqwestClient;
@@ -60,7 +60,7 @@ struct AssetFiles;
 
 struct MergedAssets {
     local_directories: Vec<PathBuf>,
-    component_assets: gpui_component_assets::Assets,
+    component_assets: gpui_kit::assets::Assets,
 }
 
 impl AssetSource for MergedAssets {
@@ -135,10 +135,10 @@ async fn main() {
     let http_client = ReqwestClient::user_agent("gpui").unwrap();
     let assets = MergedAssets {
         local_directories: vec![PathBuf::from("/"), PathBuf::from("./src/icon")],
-        component_assets: gpui_component_assets::Assets,
+        component_assets: gpui_kit::assets::Assets,
     };
 
-    gpui_platform::application()
+    gpui_kit::application()
         .with_http_client(Arc::new(http_client))
         .with_assets(assets)
         .run(move |cx| {
@@ -162,7 +162,7 @@ async fn main() {
                     false
                 });
 
-                gpui_component::init(app);
+                gpui_kit::init(app);
 
                 app.new(|cx| {
                     let play_core_state = cx.new(|cx| PlayCoreState::new(cx));

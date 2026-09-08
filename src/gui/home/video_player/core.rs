@@ -2,8 +2,8 @@ use super::ExportStatus;
 use super::SidePanelState;
 use super::VideoPlayer;
 use anyhow::Context as AnyhowContext;
-use gpui::http_client::Url;
-use gpui::{AsyncApp, Context, EntityId, Window};
+use gpui_kit::http_client::Url;
+use gpui_kit::{AsyncApp, Context, EntityId, Window};
 use player_core::{
     PlayCoreDownload, PlayCoreDownloadRequest, PlayCoreTranscodeFormat, PlayCoreTranscodeRequest,
     PlayCoreTranscoder, PlayStatic,

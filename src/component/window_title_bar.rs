@@ -1,7 +1,7 @@
 use crate::component::color::rgb_to_u32;
-use gpui::prelude::FluentBuilder;
-use gpui::*;
-use gpui_component::*;
+use gpui_kit::component::*;
+use gpui_kit::prelude::FluentBuilder;
+use gpui_kit::*;
 
 pub struct CustomTitleBar {}
 

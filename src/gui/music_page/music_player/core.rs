@@ -1,6 +1,6 @@
 use super::MusicPlayer;
 use crate::drive::NetworkStatic;
-use gpui::{AsyncApp, Context, EntityId, WindowId};
+use gpui_kit::{AsyncApp, Context, EntityId, WindowId};
 use player_core::{PlayCoreGlobalState, PlayCoreStateEvent, PlayStatic};
 
 impl MusicPlayer {
@@ -19,7 +19,7 @@ impl MusicPlayer {
         cx.notify();
     }
 
-    pub fn _is_current_item(&self, id: &str, cx: &gpui::App) -> bool {
+    pub fn _is_current_item(&self, id: &str, cx: &gpui_kit::App) -> bool {
         self.play_core.read(cx)._view_state().player.id == id
     }
 

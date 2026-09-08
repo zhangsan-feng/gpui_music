@@ -1,6 +1,6 @@
 use crate::state::{PlayCoreGlobalState, PlayCoreStateEvent};
 use crate::{PlatState, PlayCore, PlayCoreMediaType};
-use gpui::*;
+use gpui_kit::*;
 use gstreamer as gst;
 use gstreamer::prelude::*;
 use std::time::Duration;

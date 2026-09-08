@@ -1,5 +1,5 @@
 use crate::{PlatState, PlayCore, PlayCoreMediaType};
-use gpui::Context;
+use gpui_kit::Context;
 use gstreamer as gst;
 
 impl PlayCore {

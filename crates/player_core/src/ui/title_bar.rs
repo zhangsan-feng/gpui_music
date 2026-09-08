@@ -1,7 +1,7 @@
-use crate::{rgb_to_u32, PlayCore};
-use gpui::prelude::FluentBuilder;
-use gpui::*;
-use gpui_component::h_flex;
+use crate::{PlayCore, rgb_to_u32};
+use gpui_kit::component::h_flex;
+use gpui_kit::prelude::FluentBuilder;
+use gpui_kit::*;
 
 impl PlayCore {
     fn render_window_button(

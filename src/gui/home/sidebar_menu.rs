@@ -1,7 +1,7 @@
 use crate::component::color::rgb_to_u32;
 use crate::gui::home::Page;
-use gpui::*;
-use gpui_component::*;
+use gpui_kit::component::*;
+use gpui_kit::*;
 use std::time::Duration;
 
 pub struct CustomSidebarMenu {

@@ -1,12 +1,12 @@
 use super::core::export_format_label;
 use super::{SidePanelState, VideoPlayer};
 use crate::component::color::rgb_to_u32;
-use gpui::*;
-use gpui_component::button::{Button, ButtonVariants};
-use gpui_component::input::Input;
-use gpui_component::menu::{DropdownMenu, PopupMenu, PopupMenuItem};
-use gpui_component::scroll::{Scrollbar, ScrollbarAxis, ScrollbarMode};
-use gpui_component::{Disableable, IconName, h_flex, v_flex};
+use gpui_kit::component::button::{Button, ButtonVariants};
+use gpui_kit::component::input::Input;
+use gpui_kit::component::menu::{DropdownMenu, PopupMenu, PopupMenuItem};
+use gpui_kit::component::scroll::{Scrollbar, ScrollbarAxis, ScrollbarMode};
+use gpui_kit::component::{Disableable, IconName, h_flex, v_flex};
+use gpui_kit::*;
 use player_core::{PlayCoreMediaType, PlayCoreTranscodeFormat, PlayCoreViewState};
 use std::rc::Rc;
 use std::time::Duration;

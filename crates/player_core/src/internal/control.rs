@@ -1,5 +1,5 @@
 use crate::{PlatState, PlayCore, PlayStatic};
-use gpui::{Bounds, Context, ExternalPaths, Point};
+use gpui_kit::{Bounds, Context, ExternalPaths, Point};
 use std::time::Duration;
 
 impl PlayCore {
@@ -19,8 +19,8 @@ impl PlayCore {
 
     pub fn _drag_progress_at(
         &mut self,
-        position: Point<gpui::Pixels>,
-        bounds: Bounds<gpui::Pixels>,
+        position: Point<gpui_kit::Pixels>,
+        bounds: Bounds<gpui_kit::Pixels>,
         cx: &mut Context<Self>,
     ) -> Option<Duration> {
         let target = self.get_progress_position(position, bounds)?;
@@ -47,8 +47,8 @@ impl PlayCore {
 
     pub fn _drag_volume_at(
         &mut self,
-        position: Point<gpui::Pixels>,
-        bounds: Bounds<gpui::Pixels>,
+        position: Point<gpui_kit::Pixels>,
+        bounds: Bounds<gpui_kit::Pixels>,
         cx: &mut Context<Self>,
     ) -> f32 {
         let volume = self.bar_ratio(position, bounds);

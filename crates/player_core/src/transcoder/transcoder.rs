@@ -1,5 +1,5 @@
 use anyhow::{Context as AnyhowContext, bail};
-use gpui::http_client::Url;
+use gpui_kit::http_client::Url;
 use gstreamer as gst;
 use gstreamer::prelude::*;
 use gstreamer_app as gst_app;

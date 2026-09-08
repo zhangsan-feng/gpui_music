@@ -1,11 +1,11 @@
 use crate::{PlatState, PlayCore, PlayStatic};
 use anyhow::anyhow;
-use gpui::http_client::Url;
-use gpui::{
+use gpui_kit::component::Root;
+use gpui_kit::http_client::Url;
+use gpui_kit::{
     App, AppContext, Bounds, Context, EntityId, ExternalPaths, IntoElement, Point, SharedString,
     TitlebarOptions, Window, WindowBounds, WindowDecorations, WindowId, WindowOptions, px, size,
 };
-use gpui_component::Root;
 use reqwest::header::HeaderMap;
 use std::path::Path;
 use std::sync::{Arc, Mutex};

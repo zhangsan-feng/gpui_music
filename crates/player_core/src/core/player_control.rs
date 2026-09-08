@@ -1,5 +1,5 @@
 use crate::{PlatState, PlayCore, PlayCoreMediaType};
-use gpui::{Bounds, Context, Pixels, Point};
+use gpui_kit::{Bounds, Context, Pixels, Point};
 use gstreamer as gst;
 use std::time::Duration;
 

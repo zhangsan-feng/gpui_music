@@ -1,4 +1,4 @@
-use gpui::http_client::Url;
+use gpui_kit::http_client::Url;
 use std::collections::HashMap;
 use std::fmt::Debug;
 use std::path::Path;

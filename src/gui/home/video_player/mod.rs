@@ -2,8 +2,8 @@ mod core;
 mod side_panel;
 mod ui;
 
-use gpui::{AppContext, Context, Entity, ListAlignment, ListState, Subscription, Window};
-use gpui_component::input::{InputEvent, InputState};
+use gpui_kit::component::input::{InputEvent, InputState};
+use gpui_kit::{AppContext, Context, Entity, ListAlignment, ListState, Subscription, Window};
 use player_core::PlayCore;
 
 #[derive(Clone, Copy, PartialEq, Eq)]
@@ -59,8 +59,8 @@ impl VideoPlayer {
             current_index: None,
             side_panel_state: SidePanelState::Open,
             side_panel_animation_id: 0,
-            play_list_state: ListState::new(0, ListAlignment::Top, gpui::px(64.))
-                .with_uniform_item_height(gpui::px(44.)),
+            play_list_state: ListState::new(0, ListAlignment::Top, gpui_kit::px(64.))
+                .with_uniform_item_height(gpui_kit::px(44.)),
             network_url_input,
             _network_url_input_subscription: network_url_input_subscription,
             export_in_progress: false,

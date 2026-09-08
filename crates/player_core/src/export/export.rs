@@ -2,7 +2,7 @@ use crate::transcoder::transcoder::{
     PlayCoreTranscodeFormat, PlayCoreTranscodeTrim, PlayCoreTranscoder, make_uri_decodebin,
 };
 use anyhow::{Context as AnyhowContext, bail};
-use gpui::http_client::Url;
+use gpui_kit::http_client::Url;
 use std::path::PathBuf;
 use std::time::Duration;
 

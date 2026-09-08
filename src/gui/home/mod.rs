@@ -7,8 +7,8 @@ use crate::gui::home::sidebar_menu::CustomSidebarMenu;
 use crate::gui::home::video_player::VideoPlayer;
 use crate::gui::music_page::MusicPage;
 use crate::gui::video_page::VideoPage;
-use gpui::*;
-use gpui_component::{Root, h_flex, v_flex};
+use gpui_kit::component::{Root, h_flex, v_flex};
+use gpui_kit::*;
 use std::time::Duration;
 
 #[derive(PartialEq, Clone, Copy)]

@@ -1,5 +1,7 @@
 use crate::PlayStatic;
-use gpui::{AppContext, Context, Entity, EntityId, EventEmitter, Global, Subscription, WindowId};
+use gpui_kit::{
+    AppContext, Context, Entity, EntityId, EventEmitter, Global, Subscription, WindowId,
+};
 
 #[derive(Clone)]
 pub struct PlayCoreState {}

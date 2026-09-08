@@ -1,10 +1,10 @@
 use super::VideoPage;
 use crate::component::color::rgb_to_u32;
 use crate::drive::NetworkStatic;
-use gpui::prelude::FluentBuilder;
-use gpui::*;
-use gpui_component::button::{Button, ButtonVariants};
-use gpui_component::{IconName, h_flex, v_flex, v_virtual_list};
+use gpui_kit::component::button::{Button, ButtonVariants};
+use gpui_kit::component::{IconName, h_flex, v_flex, v_virtual_list};
+use gpui_kit::prelude::FluentBuilder;
+use gpui_kit::*;
 use regex::Regex;
 use std::rc::Rc;
 use std::sync::OnceLock;

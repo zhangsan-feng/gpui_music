@@ -1,4 +1,4 @@
-use gpui::*;
+use gpui_kit::*;
 use gstreamer as gst;
 use image::{Frame, RgbaImage};
 use std::sync::{Arc, Mutex};

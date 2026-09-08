@@ -1,5 +1,5 @@
 use super::VideoPage;
-use gpui::{AnyElement, Context, Window};
+use gpui_kit::{AnyElement, Context, Window};
 
 impl VideoPage {
     pub(super) fn render_search_page(

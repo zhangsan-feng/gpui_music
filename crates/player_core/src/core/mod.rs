@@ -1,9 +1,9 @@
 use crate::state::{PlayCoreGlobalState, PlayCoreStateEvent};
-use gpui::{
+use gpui_kit::component::v_flex;
+use gpui_kit::{
     Context, ExternalPaths, InteractiveElement, IntoElement, ParentElement, Render, Rgba, Styled,
     Window, WindowId, rgb,
 };
-use gpui_component::v_flex;
 use reqwest::header::{ACCEPT, ACCEPT_LANGUAGE, HeaderMap, HeaderValue, USER_AGENT};
 
 mod player_control;

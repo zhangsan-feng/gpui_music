@@ -4,10 +4,10 @@ mod recommend_page;
 mod search_page;
 mod ui;
 
-use gpui::prelude::FluentBuilder;
-use gpui::*;
-use gpui_component::input::InputState;
-use gpui_component::{VirtualListScrollHandle, v_flex};
+use gpui_kit::component::input::InputState;
+use gpui_kit::component::{VirtualListScrollHandle, v_flex};
+use gpui_kit::prelude::FluentBuilder;
+use gpui_kit::*;
 use player_core::{PlayCoreGlobalState, PlayCoreStateEvent};
 
 #[derive(Clone, Copy, PartialEq)]

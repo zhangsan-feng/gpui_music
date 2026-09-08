@@ -1,12 +1,12 @@
 use super::{Page, VideoPage};
 use crate::component::color::rgb_to_u32;
 use crate::drive::NetworkStatic;
-use gpui::prelude::FluentBuilder;
-use gpui::*;
-use gpui_component::button::{Button, ButtonVariants};
-use gpui_component::input::Input;
-use gpui_component::scroll::{Scrollbar, ScrollbarAxis, ScrollbarMode};
-use gpui_component::{h_flex, v_flex, v_virtual_list};
+use gpui_kit::component::button::{Button, ButtonVariants};
+use gpui_kit::component::input::Input;
+use gpui_kit::component::scroll::{Scrollbar, ScrollbarAxis, ScrollbarMode};
+use gpui_kit::component::{h_flex, v_flex, v_virtual_list};
+use gpui_kit::prelude::FluentBuilder;
+use gpui_kit::*;
 use std::rc::Rc;
 
 impl VideoPage {
@@ -225,7 +225,9 @@ impl VideoPage {
             .into_any_element()
     }
 
-    pub(super) fn render_scrollbar(handle: &gpui_component::VirtualListScrollHandle) -> AnyElement {
+    pub(super) fn render_scrollbar(
+        handle: &gpui_kit::component::VirtualListScrollHandle,
+    ) -> AnyElement {
         div()
             .w(px(16.))
             .h_full()

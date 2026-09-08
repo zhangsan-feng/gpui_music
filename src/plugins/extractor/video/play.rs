@@ -3,7 +3,7 @@ use crate::drive::{NetworkStatic, NetworkStaticInterface};
 use crate::plugins::extractor::config::{self, PlatformConfig};
 #[cfg(test)]
 use futures_util::future::join_all;
-use gpui::http_client::Url;
+use gpui_kit::http_client::Url;
 
 #[cfg(test)]
 pub(crate) async fn filter_playable(items: Vec<NetworkStatic>) -> Vec<NetworkStatic> {
